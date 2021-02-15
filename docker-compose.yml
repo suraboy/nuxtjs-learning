@@ -1,13 +1,21 @@
 version: '3.7'
 
 services:
-  vuejs:
-    container_name: vuejs
+  nuxtjs-app:
+    container_name: nuxtjs-app
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/Dockerfile
     restart: always
     ports:
-      - "8090:8080"
+      - "3000:3000"
     volumes:
-      - .:/usr/src/app:cached
+      - .:/app
+      - /app/node_modules/
+    command: npm run dev
+    environment:
+      HOST: 0.0.0.0
+      APP_ENV: local
+      NODE_ENV: local
+    extra_hosts:
+      - nuxtjs-app.local:127.0.0.1
