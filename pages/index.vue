@@ -3,9 +3,10 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxtjs-learning by boy
+        Nuxtjs Learning By Boy
       </h1>
       <div class="links">
+        <NuxtLink to="/home" target="_blank" class="button--green">Home page</NuxtLink>
         <a
           href="https://nuxtjs.org/"
           target="_blank"
