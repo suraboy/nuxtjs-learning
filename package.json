@@ -1,22 +1,36 @@
 {
-  "name": "nuxtjs-learning",
+  "name": "aws-node-vue-nuxt-ssr",
   "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate"
+  "description": "Sample nuxtjs project and deploy by lambda aws.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.10"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "npm run build && sls deploy",
+    "start-server": "npm run build && node app.js",
+    "start-sls": "npm run build && sls offline start"
+  },
+  "keywords": [],
+  "author": "Sirichai Janpan",
+  "license": "MIT",
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.1",
+    "@nuxt/http": "^0.1.2",
+    "axios": "^0.18.0",
+    "nuxt": "^2.6.3",
+    "nuxt-start": "^2.6.3",
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-http": "^2.0.1",
     "bootstrap": "^4.6.0",
-    "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "bootstrap-vue": "^2.21.2"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.12",
-    "@nuxt/typescript-build": "^2.0.4"
+    "serverless-domain-manager": "^3.2.1",
+    "serverless-offline": "^4.10.0"
   }
 }
