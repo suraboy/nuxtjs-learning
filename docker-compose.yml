@@ -5,7 +5,7 @@ services:
     container_name: nuxtjs-app
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: docker/Dockerfile
     restart: always
     ports:
       - "3000:3000"
