@@ -1,0 +1,8 @@
+name: nuxtjs-learning
+component: website
+
+inputs:
+  src:
+    src: ./src
+    hook: npm run build
+    dist: ./dist
